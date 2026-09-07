@@ -119,7 +119,7 @@ public class ParkingService {
         switch(parkedCarEntity.getVehicleType()) {
             case 1 -> baseRatePerMinute = 0.10;
             case 2 -> baseRatePerMinute = 0.20;
-            case 3 -> baseRatePerMinute = 0.30;
+            case 3 -> baseRatePerMinute = 0.40;
             default -> throw new IllegalArgumentException("No vehicle type found for "+parkedCarEntity.getVehicleReg());
         }
         double totalBaseRate =  calculateParkedMinutes * baseRatePerMinute;
